@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About Me
+title: About Us
 permalink: /about/
 ---
 
-I'm a high school student taking the AP CSA course. This is a personal blog to store my work and document my learnings.
+We are 3 computer science students working to create a learning aid for the Java-based CSA class.
