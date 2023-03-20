@@ -29,7 +29,7 @@
   
       ,"page1": {
           "title": "About Us",
-          "content": "We are 3 computer science students working to create a learning aid for the Java-based CSA class. .",
+          "content": "We are 3 computer science students working to create an ArrayList learning aid for the Java-based CSA class. .",
           "url": "https://xiaoa0.github.io/t3trio/about/",
           "relUrl": "/about/",
           "date": ""
