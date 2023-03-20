@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Java Data Types | Allie’s CSA blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Java Data Types" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A place to document my learnings in the AP Computer Science A class" />
+<meta property="og:description" content="A place to document my learnings in the AP Computer Science A class" />
+<link rel="canonical" href="https://xiaoa0.github.io/fastpages2/fastpages/jupyter/2023/03/06/java-data-types.html" />
+<meta property="og:url" content="https://xiaoa0.github.io/fastpages2/fastpages/jupyter/2023/03/06/java-data-types.html" />
+<meta property="og:site_name" content="Allie’s CSA blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-06T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Java Data Types" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-06T00:00:00-06:00","datePublished":"2023-03-06T00:00:00-06:00","description":"A place to document my learnings in the AP Computer Science A class","headline":"Java Data Types","mainEntityOfPage":{"@type":"WebPage","@id":"https://xiaoa0.github.io/fastpages2/fastpages/jupyter/2023/03/06/java-data-types.html"},"url":"https://xiaoa0.github.io/fastpages2/fastpages/jupyter/2023/03/06/java-data-types.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://xiaoa0.github.io/fastpages2/feed.xml" title="Allie's CSA blog" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages2/">Allie&#39;s CSA blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages2/about/">About Us</a><a class="page-link" href="/fastpages2/search/">Search</a><a class="page-link" href="/fastpages2/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Java Data Types</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-06T00:00:00-06:00" itemprop="datePublished">
+        Mar 6, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastpages2/categories/#fastpages">fastpages</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages2/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/xiaoa0/fastpages2/tree/master/_notebooks/2023-03-06-java-data-types.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/fastpages2/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/xiaoa0/fastpages2/master?filepath=_notebooks%2F2023-03-06-java-data-types.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages2/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/xiaoa0/fastpages2/blob/master/_notebooks/2023-03-06-java-data-types.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages2/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fxiaoa0%2Ffastpages2%2Fblob%2Fmaster%2F_notebooks%2F2023-03-06-java-data-types.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/fastpages2/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#Sample-Binary-Addition">Sample Binary Addition </a></li>
+<li class="toc-entry toc-h3"><a href="#Code-Example:-Before-and-After-Multiplying-by-5">Code Example: Before and After Multiplying by 5 </a></li>
+<li class="toc-entry toc-h3"><a href="#Converting-to-Wrapper-Class">Converting to Wrapper Class </a></li>
+<li class="toc-entry toc-h2"><a href="#Exploring-Teacher-Code:">Exploring Teacher Code: </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#What-are-Methods-and-Control-Structures?">What are Methods and Control Structures? </a></li>
+<li class="toc-entry toc-h3"><a href="#Diverse-Arrays">Diverse Arrays </a></li>
+<li class="toc-entry toc-h3"><a href="#Math.random()">Math.random() </a></li>
+<li class="toc-entry toc-h3"><a href="#DoNothingByValue">DoNothingByValue </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Explore-AP-Classroom">Explore AP Classroom </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#The-Exam">The Exam </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#2022-FRQ-1">2022 FRQ 1 </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#AP-CSA-FRQ-2017-Methods-and-Control-Structures">AP CSA FRQ 2017 Methods and Control Structures </a></li>
+<li class="toc-entry toc-h3"><a href="#FRQ-4-Solution">FRQ 4 Solution </a></li>
+<li class="toc-entry toc-h3"><a href="#Discussion-of-Methods-&-Control-Structures:">Discussion of Methods &amp; Control Structures: </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-06-java-data-types.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sample-Binary-Addition">
+<a class="anchor" href="#Sample-Binary-Addition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Binary Addition<a class="anchor-link" href="#Sample-Binary-Addition"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JavaBinaryAdder</span> <span class="p">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+   <span class="p">{</span>
+	<span class="c1">//Two variables to hold two input binary numbers	 </span>
+	<span class="kt">long</span> <span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="c1">//This is to hold the output binary number</span>
+	<span class="kt">int</span><span class="o">[]</span> <span class="n">sum</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+
+	<span class="c1">//To read the input binary numbers entered by user</span>
+	<span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+	<span class="c1">//getting first binary number from user</span>
+	<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter first binary number: "</span><span class="p">);</span>
+	<span class="n">b1</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextLong</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">b1</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+	<span class="c1">//getting second binary number from user</span>
+	<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter second binary number: "</span><span class="p">);</span>
+	<span class="n">b2</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextLong</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">b2</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+
+	<span class="c1">//closing scanner after use to avoid memory leak</span>
+	<span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+	<span class="k">while</span> <span class="p">(</span><span class="n">b1</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">b2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> 
+	<span class="p">{</span>
+		<span class="n">sum</span><span class="o">[</span><span class="n">i</span><span class="o">++]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)((</span><span class="n">b1</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">b2</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">carry</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span><span class="p">);</span>
+		<span class="n">carry</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)((</span><span class="n">b1</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">b2</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">carry</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+		<span class="n">b1</span> <span class="o">=</span> <span class="n">b1</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+		<span class="n">b2</span> <span class="o">=</span> <span class="n">b2</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">carry</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">sum</span><span class="o">[</span><span class="n">i</span><span class="o">++]</span> <span class="o">=</span> <span class="n">carry</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="o">--</span><span class="n">i</span><span class="p">;</span>
+	<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Output: "</span><span class="p">);</span>
+	<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">sum</span><span class="o">[</span><span class="n">i</span><span class="o">--]</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"\n"</span><span class="p">);</span>  
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">JavaBinaryAdder</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter first binary number: 1111
+Enter second binary number: 10101
+Output: 100100
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Code-Example:-Before-and-After-Multiplying-by-5">
+<a class="anchor" href="#Code-Example:-Before-and-After-Multiplying-by-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Example: Before and After Multiplying by 5<a class="anchor-link" href="#Code-Example:-Before-and-After-Multiplying-by-5"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MultiplyBy5</span> <span class="p">{</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">changeInt</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"In changeInt method"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tBefore n *= 5: n = "</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// prints 5</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*=</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tAfter n *= 5: n = "</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// prints 10</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter number: "</span><span class="p">);</span>
+	    <span class="n">n</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Main method before changeInt(n): n = "</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// prints 5</span>
+        <span class="n">changeInt</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Main method after changeInt(n): n = "</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// still prints 5</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">MultiplyBy5</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter number: Main method before changeInt(n): n = 6
+In changeInt method
+	Before n *= 5: n = 6
+	After n *= 5: n = 30
+Main method after changeInt(n): n = 6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Converting-to-Wrapper-Class">
+<a class="anchor" href="#Converting-to-Wrapper-Class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting to Wrapper Class<a class="anchor-link" href="#Converting-to-Wrapper-Class"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">primitiveInt</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+<span class="n">Integer</span><span class="o">[]</span> <span class="n">wrapperIntArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[]</span> <span class="p">{</span> <span class="n">primitiveInt</span> <span class="p">};</span>
+<span class="n">Integer</span> <span class="n">wrapperInt</span> <span class="o">=</span> <span class="n">wrapperIntArray</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exploring-Teacher-Code:">
+<a class="anchor" href="#Exploring-Teacher-Code:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploring Teacher Code:<a class="anchor-link" href="#Exploring-Teacher-Code:"> </a>
+</h2>
+<h3 id="What-are-Methods-and-Control-Structures?">
+<a class="anchor" href="#What-are-Methods-and-Control-Structures?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are Methods and Control Structures?<a class="anchor-link" href="#What-are-Methods-and-Control-Structures?"> </a>
+</h3>
+<ul>
+<li>A method, also known as a function or subroutine, is a block of code that performs a specific task. Methods can be called multiple times and can accept input parameters and return output values. They are used to break down complex tasks into smaller, more manageable units of code.</li>
+<li>Control structures are used to control the flow of execution in a program. They determine the order in which statements are executed based on certain conditions. There are three main types of control structures:<ol>
+<li>Conditional statements: These are used to execute a certain block of code only if a particular condition is met. Examples include the "if" statement, the "else" statement, and the "switch" statement.</li>
+<li>Looping statements: These are used to repeat a block of code until a particular condition is met. Examples include the "for" loop, the "while" loop, and the "do-while" loop.</li>
+<li>Jump statements: These are used to transfer control to another part of the program. Examples include the "break" statement, the "continue" statement, and the "return" statement.</li>
+</ol>
+</li>
+</ul>
+<h3 id="Diverse-Arrays">
+<a class="anchor" href="#Diverse-Arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>Diverse Arrays<a class="anchor-link" href="#Diverse-Arrays"> </a>
+</h3>
+<ul>
+<li>This code definitely contains multiple Methods and Control Structures. The Methods are seen in functions such as arraySum(), rowSums(), and isDiverse(), as they are called in different places within the class and each do their own procedure. The Control Structures can be seen in the multiple conventional for loops in each of the methods.</li>
+<li>The primary data types in the diverse matrix code are int and boolean as ints are used to stare the numbers within the 2D arrays and a boolean is used to provide the final answer as to whether the sums of the array rows are diverse or not.</li>
+</ul>
+<h3 id="Math.random()">
+<a class="anchor" href="#Math.random()" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>Math.random()</code><a class="anchor-link" href="#Math.random()"> </a>
+</h3>
+<ul>
+<li>
+<code>Math.random()</code> is a built-in method in Java that returns a pseudo-random double value between 0.0 and 1.0 (inclusive).</li>
+<li>This method uses a mathematical algorithm to generate random numbers, which means that the numbers are not truly random but are determined by the algorithm.- <code>int randomNum = (int)(Math.random() * 10);</code> returns a value between 0.0 and 1.0, which is then multiplied by 10 and cast to an integer. The resulting value is a random integer between 0 and 9.</li>
+<li>If you want to get an integer value between 7 and 9, you can cast the result of the expression to an int, like this: <code>int randomInt = (int) (Math.random() * 2 + 7);</code> Here, <code>Math.random() * 2</code> generates a random value between 0 and 2, and then adding 7 to it will shift the range to be between 7 and 9.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="DoNothingByValue">
+<a class="anchor" href="#DoNothingByValue" aria-hidden="true"><span class="octicon octicon-link"></span></a>DoNothingByValue<a class="anchor-link" href="#DoNothingByValue"> </a>
+</h3>
+<ul>
+<li>Seems to be multiple ways in order to change input such as arrays of numbers or strings into default values/empty arrays of 0.</li>
+<li>This is done by creating a default array arr and setting all the values to 0 through the use of conventional for loops.
+### IntByReference</li>
+<li>Wraps int inputs into Integers, because they need to be objects in order to work with the swapper method.</li>
+<li>In order to swap values if the latter one is lesser, the value is stored in a tmp variable in order to switch around.
+### Menu</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MultiplyBy5</span> <span class="p">{</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">changeInt</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"In changeInt method"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tBefore n *= 5: n = "</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// prints 5</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*=</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\tAfter n *= 5: n = "</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// prints 10</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter number: "</span><span class="p">);</span>
+	    <span class="n">n</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Main method before changeInt(n): n = "</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// prints 5</span>
+        <span class="n">changeInt</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Main method after changeInt(n): n = "</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// still prints 5</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cm">/**</span>
+<span class="cm"> * Menu: custom implementation</span>
+<span class="cm"> * @author     John Mortensen</span>
+<span class="cm"> *</span>
+<span class="cm"> * Uses String to contain Title for an Option</span>
+<span class="cm"> * Uses Runnable to store Class-Method to be run when Title is selected</span>
+<span class="cm"> */</span>
+
+<span class="c1">// The Menu Class has a HashMap of Menu Rows</span>
+
+
+<span class="c1">// The MenuRow Class has title and action for individual line item in menu</span>
+<span class="kd">class</span> <span class="nc">MenuRow</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="n">title</span><span class="p">;</span>       <span class="c1">// menu item title</span>
+    <span class="n">Runnable</span> <span class="n">action</span><span class="p">;</span>    <span class="c1">// menu item action, using Runnable</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Constructor for MenuRow,</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param  title,  is the description of the menu item</span>
+<span class="cm">     * @param  action, is the run-able action for the menu item</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">MenuRow</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">,</span> <span class="n">Runnable</span> <span class="n">action</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">action</span> <span class="o">=</span> <span class="n">action</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Getters</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTitle</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="n">Runnable</span> <span class="nf">getAction</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">action</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Runs the action using Runnable (.run)</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">action</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// The Main Class illustrates initializing and using Menu with Runnable action</span>
+<span class="kd">class</span> <span class="nc">Driver</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     *  Menu Control Example</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Row initialize</span>
+        <span class="n">MenuRow</span><span class="o">[]</span> <span class="n">rows</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MenuRow</span><span class="o">[]</span><span class="p">{</span>
+            <span class="c1">// lambda style, () -&gt; to point to Class.Method</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Exit"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Multiply By 5"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">MultiplyBy5</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Do Nothing"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">MultiplyBy5</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Swap if Hi-Low"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">MultiplyBy5</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Matrix Reverse"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">MultiplyBy5</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Diverse Array"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">MultiplyBy5</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Random Squirrels"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">MultiplyBy5</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">))</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Menu construction</span>
+        <span class="n">Menu</span> <span class="n">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Menu</span><span class="p">(</span><span class="n">rows</span><span class="p">);</span>
+
+        <span class="c1">// Run menu forever, exit condition contained in loop</span>
+        <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hacks Menu:"</span><span class="p">);</span>
+            <span class="c1">// print rows</span>
+            <span class="n">menu</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+
+            <span class="c1">// Scan for input</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="n">Scanner</span> <span class="n">scan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">selection</span> <span class="o">=</span> <span class="n">scan</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+                <span class="c1">// menu action</span>
+                <span class="k">try</span> <span class="p">{</span>
+                    <span class="n">MenuRow</span> <span class="n">row</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">selection</span><span class="p">);</span>
+                    <span class="c1">// stop menu</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="na">getTitle</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">"Exit"</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Goodbye!"</span><span class="p">);</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">scan</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> 
+                            <span class="n">scan</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>  <span class="c1">// scanner resource requires release</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="c1">// run option</span>
+                    <span class="n">row</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Invalid selection %d\n"</span><span class="p">,</span> <span class="n">selection</span><span class="p">);</span>
+                <span class="p">}</span>
+
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not a number"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span><span class="n">Driver</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hacks Menu:
+0 ==&gt; Exit
+1 ==&gt; Multiply By 5
+2 ==&gt; Do Nothing
+3 ==&gt; Swap if Hi-Low
+4 ==&gt; Matrix Reverse
+5 ==&gt; Diverse Array
+6 ==&gt; Random Squirrels
+
+Enter number: Main method before changeInt(n): n = 346
+In changeInt method
+	Before n *= 5: n = 346
+	After n *= 5: n = 1730
+Main method after changeInt(n): n = 346
+
+Hacks Menu:
+0 ==&gt; Exit
+1 ==&gt; Multiply By 5
+2 ==&gt; Do Nothing
+3 ==&gt; Swap if Hi-Low
+4 ==&gt; Matrix Reverse
+5 ==&gt; Diverse Array
+6 ==&gt; Random Squirrels
+
+Goodbye!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>MenuRow is a method because it's a piece of code grouped together in a way that performs a specific task - initializing each row of the menu - and it's called over and over in the driver class. Though the MenuRow class itself is not a control structure, it is part of a switch case used in the Driver class which is.</li>
+<li>The Driver mainly has a switch case control structure, in which different operations are performed depending on which int is typed into the scanner. For example there is a section of code where there's an if statement stating that if 0 is typed into the scanner, the menu will exited out of.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Explore-AP-Classroom">
+<a class="anchor" href="#Explore-AP-Classroom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explore AP Classroom<a class="anchor-link" href="#Explore-AP-Classroom"> </a>
+</h2>
+<h3 id="The-Exam">
+<a class="anchor" href="#The-Exam" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Exam<a class="anchor-link" href="#The-Exam"> </a>
+</h3>
+<ul>
+<li>MC is 40 questions in 90 minutes (2 mins per question)</li>
+<li>4 FRQs in 90 minutes</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2022-FRQ-1">
+<a class="anchor" href="#2022-FRQ-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>2022 FRQ 1<a class="anchor-link" href="#2022-FRQ-1"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Digits</span> <span class="p">{</span>
+    <span class="cm">/** The list of digits from the number used to construct this object.</span>
+<span class="cm">    * The digits appear in the list in the same order in which they appear in the original number.</span>
+<span class="cm">    */</span>
+    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">digitList</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Digits</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if num is 0 or positive</span>
+        <span class="n">digitList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if num is 0</span>
+            <span class="n">digitList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span> <span class="c1">// copying each digit into arraylist</span>
+        <span class="p">}</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if num is 1 or greater</span>
+            <span class="n">digitList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">10</span><span class="p">));</span> <span class="c1">// dividing by 10 so that only the digit is stored</span>
+            <span class="n">num</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isStrictlyIncreasing</span><span class="p">()</span> <span class="p">{</span> 
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">digitList</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// looping through each item in digitlist</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">digitList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">intValue</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">digitList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">).</span><span class="na">intValue</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// if digit at index i is greater than at index i+1 (not sorted)</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// otherwise return true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="AP-CSA-FRQ-2017-Methods-and-Control-Structures">
+<a class="anchor" href="#AP-CSA-FRQ-2017-Methods-and-Control-Structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>AP CSA FRQ 2017 Methods and Control Structures<a class="anchor-link" href="#AP-CSA-FRQ-2017-Methods-and-Control-Structures"> </a>
+</h3>
+<ul>
+<li><a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-frq-2017.pdf">https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-frq-2017.pdf</a></li>
+</ul>
+<h3 id="FRQ-4-Solution">
+<a class="anchor" href="#FRQ-4-Solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>FRQ 4 Solution<a class="anchor-link" href="#FRQ-4-Solution"> </a>
+</h3>
+<ul>
+<li>part a:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="n">Position</span> <span class="nf">findPosition</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">intArr</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// input is entered and saved as num</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">intArr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// iterates through each  row</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">intArr</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// iterates through each column in the row</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">intArr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">==</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if value = num</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="n">Position</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">);</span> <span class="c1">// return the value</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>part b:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="n">Position</span><span class="o">[][]</span> <span class="nf">getSuccessorArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">intArr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Position</span><span class="o">[][]</span> <span class="n">newArr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Position</span><span class="o">[</span><span class="n">intArr</span><span class="p">.</span><span class="na">length</span><span class="o">][</span><span class="n">intArr</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">intArr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">intArr</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// iterates through rows and columns</span>
+            <span class="n">newArr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">=</span> <span class="n">findPosition</span><span class="p">(</span><span class="n">intArr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]+</span><span class="mi">1</span><span class="p">,</span> <span class="n">intArr</span><span class="p">);</span> <span class="c1">// returns the coordinates of where that specific number is in the first array</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+<span class="k">return</span> <span class="n">newArr</span><span class="p">;</span> <span class="c1">// displays as a whole new array of coordinates</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Discussion-of-Methods-&amp;-Control-Structures:">
+<a class="anchor" href="#Discussion-of-Methods-&amp;-Control-Structures:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Discussion of Methods &amp; Control Structures:<a class="anchor-link" href="#Discussion-of-Methods-&amp;-Control-Structures:"> </a>
+</h3>
+<ul>
+<li>To iterate and perform operations throughout the 2D there are multiple For Loops that iterate through each value of the array to perform operations on it.</li>
+<li>
+<code>findPosition()</code> and <code>getSuccessorArray()</code> are both methods that complete a specific task. </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="xiaoa0/fastpages2"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/fastpages2/fastpages/jupyter/2023/03/06/java-data-types.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages2/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://xiaoa0.github.io/fastpages2/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages2/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A place to document my learnings in the AP Computer Science A class</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/xiaoa0" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/fastpages2/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
