@@ -216,7 +216,7 @@ window.onload = wrap_img;
 	<span class="c1">// Class data</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>  <span class="c1">// static initializer</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span><span class="n">User</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;}</span>
-	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">name</span><span class="p">,</span> <span class="n">grade</span><span class="p">,</span> <span class="n">role</span><span class="p">}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">grade</span><span class="p">,</span> <span class="n">role</span><span class="p">}</span>
 
 	<span class="c1">// Instance data</span>
 	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
@@ -268,12 +268,12 @@ window.onload = wrap_img;
 		<span class="c1">// Inheritance Hierarchy</span>
 		<span class="n">User</span><span class="o">[]</span> <span class="n">objs</span> <span class="o">=</span> <span class="n">users</span><span class="p">();</span>
 
-		<span class="c1">// print with grade</span>
-		<span class="n">User</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">grade</span><span class="p">);</span>
+		<span class="c1">// print with title</span>
+		<span class="n">User</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">);</span>
 		<span class="n">User</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
 
-		<span class="c1">// print role only</span>
-		<span class="n">User</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">role</span><span class="p">);</span>
+		<span class="c1">// print name only</span>
+		<span class="n">User</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
 		<span class="n">User</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
 	<span class="p">}</span>
 	
